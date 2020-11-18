@@ -26,4 +26,5 @@ LO_q = cos((2*pi*fin_LO).*time);
 RF_out = sysin_i_up .* LO_i + sysin_q_up .* LO_q;
 
 % DAC&PA, model non-linearity, this can be played with to see effects
-RF_out_final = RF_out + 0.01*RF_out.^2 + 0.05*RF_out.^3;
+RF_out_final = RF_out + 0.0001*RF_out.^2 + 0.0005*RF_out.^3;
+fft_my(RF_out', fs, fin_LO-fin_new, 1)
