@@ -1,4 +1,4 @@
-function [THD, SFDR, spectrumdB,fout] = fft_complete(data, Fs, Fin, band, fignum)
+function [THD, SFDR, spectrumdB,fout] = fft_my(data, Fs, Fin, fignum)
 % Order of hann window
 w_pwr = 2;
 
